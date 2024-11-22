@@ -77,7 +77,7 @@ import { IoMdHome } from "react-icons/io";
 import { FaUserLarge } from "react-icons/fa6";
 import { MdOutlinePhoneAndroid } from "react-icons/md";
 import { IoIosArrowDown } from "react-icons/io";
-// If the image is in the public folder, no need to import. Use "/rwanda.jpg" directly.
+import { FaGreaterThan } from "react-icons/fa6";
 
 const LandingPage = () => {
   return (
@@ -126,7 +126,7 @@ const LandingPage = () => {
         </div>
       </header>
       {/* lower section to header */}
-      <div className="flex flex-row items-center bg-white h-24 w-screen pl-14 pr-4">
+      <div className="flex flex-row items-center bg-white h-24 w-screen px-14">
             <Image
             src= "/kikkusho.webp"
             alt="Kikkusho"
@@ -142,12 +142,27 @@ const LandingPage = () => {
             
             <p className="bg-red-400 text-white font-extrabold rounded-tr-3xl rounded-br-3xl text-xl px-4">search</p>
             </div>
-          {/* cart on the right */}
-          <div className="flex flex-row gap-2 border-2 border-red-400 rounded-xl items-center h-10">
-            <BiSolidCart className="h-10 text-red-400" />
-            <p className="text-red-400 font-extrabold">Cart</p>
-            <MdOutlineKeyboardArrowRight />
+
+            {/* the right section of the second section */}
+          <div className="flex flex-row gap-6 items-center ml-auto">
+               {/* cart on the right  */}
+          <div className="flex flex-row  border-2 border-red-400 rounded-3xl w-32 items-center h-10 px-5 py-2 ml-4">
+            <BiSolidCart className="h-6 w-6 text-red-400 mr-4" />
+            <p className="text-red-400 font-medium mr-1">Cart</p>
+            < FaGreaterThan  className="text-red-400 h-3" />
            </div> 
+           {/* login and register on the second section */}
+           <div className="flex flex-row gap-2 text-black">
+            <FaUserLarge className="h-6" />
+            <div className="flex flex-row gap-1 ">
+                <p className="hover:text-red-400 hover:cursor-pointer">Login</p>
+               <span >|</span>
+               <p className="hover:text-red-400 hover:cursor-pointer ">Register</p>
+            </div>
+          </div>
+          </div>
+         
+
       </div>
     </div>
   );
